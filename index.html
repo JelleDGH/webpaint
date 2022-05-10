@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <!-- Algemene informatie -->
+    <meta content="Webpaint design" name="description">
+    <meta content="Examen webpaint" name="keywords">
+    <meta content="Jelle Dhooghe" name="author">
+    <!-- Link naar de css -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- CDN font awesome library voor de icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+    <!-- CDN AOS CSS SCROLL ANIMATIONS-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Icoontje voor in de browser -->
+    <link href="img/fav.ico" rel="icon" type="image/x-icon">
+    <title>Webpaint - Home</title>
+</head>
+<body>
+<!-- HEADER IS STICKY OM BOVENAAN DE PAGINA TE BLIJVEN -->
+<header class="sticky">
+    <!-- WRAPPER TUSSEN BRAND EN NAVIGATIE -->
+    <div class="d-flex justify-content-between align-items-center" id="nav_wrapper">
+        <!-- BRAND -->
+        <div class="d-flex justify-content-between align-items-center text-white" id="brand">
+            <img alt="Webpaint logo" src="img/logo.png">
+            <p>ebpaint</p>
+        </div>
+        <!-- DESKTOP NAVIGATIE -->
+        <nav class="align-items-center" id="desktop_nav">
+            <ul class="d-flex list-style-type-none justify-content-between align-items-center">
+                <li><a class="text-decoration-none text-uppercase" href="#">home</a></li>
+                <li><a class="text-decoration-none text-uppercase" href="#">portofolio</a></li>
+                <li><a class="text-decoration-none text-uppercase" href="#">about</a></li>
+                <li><a class="text-decoration-none text-uppercase" href="#">blog</a></li>
+                <li><a class="text-decoration-none text-uppercase" href="#">contact</a></li>
+            </ul>
+        </nav>
+        <!-- MOBIELE NAVIGATIE -->
+        <nav id="mobile_nav">
+            <ul class="d-flex align-items-center list-style-type-none">
+                <li><a class="text-decoration-none text-white" href="#" id="m_menu">&#8801;</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- SUBMENU MOBIELE NAVIGATIE-->
+    <div class="text-center" id="submenu">
+        <ul class="list-style-type-none">
+            <li><a class="text-decoration-none text-uppercase text-white" href="#">home</a></li>
+            <li><a class="text-decoration-none text-uppercase text-white" href="#">portofolio</a></li>
+            <li><a class="text-decoration-none text-uppercase text-white" href="#">about</a></li>
+            <li><a class="text-decoration-none text-uppercase text-white" href="#">blog</a></li>
+            <li><a class="text-decoration-none text-uppercase text-white" href="#">contact</a></li>
+        </ul>
+    </div>
+</header>
+<main>
+    <!-- HERO SECTION-->
+    <section class="d-flex justify-content-center w-100" id="hero">
+        <div class="text-center w-85">
+            <h1 class="text-white">We are <span id="webpaint">Webpaint</span></h1>
+            <h2 class="text-white"><span>digital & branding</span> agency based in Jupiter, and we would love to turn
+                ideas into beautifull things</h2>
+            <button class="text-uppercase text-white" data-aos="flip-up">See portfolio</button>
+        </div>
+    </section>
+    <!-- SERVICES SECTION-->
+    <section class="d-flex justify-content-center align-items-center flex-wrap w-100" id="services">
+        <!-- VERBORGEN H2 VOOR DE SECTION -->
+        <h2 hidden>services</h2>
+        <!-- SERVICE 1-->
+        <article class="service text-center fade-in-fwd">
+            <img alt="" src="img/icon-1.png">
+            <h2>Consectetur</h2>
+            <p>Vestibulum id ligula porta euismod semper. Aenean lacinia bibendum nulla sed consectetur dui.</p>
+        </article>
+        <!-- SERVICE 2-->
+        <article class="service text-center fade-in-fwd">
+            <img alt="" src="img/icon-2.png">
+            <h2>Tristiquet</h2>
+            <p>Fusce dapibus, cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo risus.</p>
+        </article>
+        <!-- SERVICE 3-->
+        <article class="service text-center fade-in-fwd">
+            <img alt="" src="img/icon-3.png">
+            <h2>Fermentum</h2>
+            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum sagittis lacus
+                mollis.</p>
+        </article>
+        <!-- SERVICE 4-->
+        <article class="service text-center fade-in-fwd">
+            <img alt="" src="img/icon-4.png">
+            <h2>Elit Ultricies</h2>
+            <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis
+                lacus vel augue laoreet.</p>
+        </article>
+    </section>
+    <!-- PORTFOLIO SECTION-->
+    <section id="portfolio">
+        <!-- VERBORGEN H2 VOOR DE SECTION -->
+        <h2 hidden>portfolio</h2>
+        <!-- FILTER TEXT-->
+        <div class="text-center">
+            <h2>Our Featured Works</h2>
+            <p id="sub_text">Curabitur blandit tempus porttitor. Maecenas faucibus mollis interdum.</p>
+        </div>
+        <!-- FILTER BUTTONS MET EEN AOS ANIMATIE EN EEN WERKENDE FILTER  -->
+        <div class="d-flex justify-content-center flex-wrap" data-aos="flip-up" id="filters">
+            <button class="img_btn text-uppercase selected" id="all" onclick="filters(this.id)">All</button>
+            <button class="img_btn text-uppercase" id="graphic" onclick="filters(this.id)">Graphic</button>
+            <button class="img_btn text-uppercase" id="illustration" onclick="filters(this.id)">Illustration</button>
+            <button class="img_btn text-uppercase" id="motion" onclick="filters(this.id)">Motion</button>
+        </div>
+        <!-- IMAGES -->
+        <div class="d-flex flex-wrap justify-content-center w-75" id="images">
+            <!-- IMAGE 1 -->
+            <article class="img_container all graphic active_filter">
+                <img alt="" src="img/image-1.png">
+                <div class="img_overlay">
+                    <h3 class="text-uppercase text-white">test</h3>
+                    <p class="category text-white">category: <span>all, graphic</span></p>
+                    <p class="overlay_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab cum eaque illo
+                        minima, omnis quae voluptatibus? Consequuntur dignissimos exercitationem, facere fugit.</p>
+                    <button>Read More</button>
+                </div>
+                <div class="img_overlay_mobile d-flex justify-content-center align-items-center">
+                    <button>Read More</button>
+                </div>
+            </article>
+            <!-- IMAGE 2-->
+            <article class="img_container all illustration active_filter">
+                <img alt="" src="img/image-2.png">
+                <div class="img_overlay">
+                    <h3 class="text-uppercase text-white">test</h3>
+                    <p class="category text-white">category: <span>all, illustration</span></p>
+                    <p class="overlay_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab cum eaque illo
+                        minima, omnis quae voluptatibus? Consequuntur dignissimos exercitationem, facere fugit.</p>
+                    <button>Read More</button>
+                </div>
+                <div class="img_overlay_mobile d-flex justify-content-center align-items-center">
+                    <button>Read More</button>
+                </div>
+            </article>
+            <!-- IMAGE 3-->
+            <article class="img_container all motion active_filter">
+                <img alt="" src="img/image-3.png">
+                <div class="img_overlay">
+                    <h3 class="text-uppercase text-white">test</h3>
+                    <p class="category text-white">category: <span>all, motion</span></p>
+                    <p class="overlay_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab cum eaque illo
+                        minima, omnis quae voluptatibus? Consequuntur dignissimos exercitationem, facere fugit.</p>
+                    <button>Read More</button>
+                </div>
+                <div class="img_overlay_mobile d-flex justify-content-center align-items-center">
+                    <button>Read More</button>
+                </div>
+            </article>
+            <!-- IMAGE 4-->
+            <article class="img_container all graphic active_filter">
+                <img alt="" src="img/image-4.png">
+                <div class="img_overlay">
+                    <h3 class="text-uppercase text-white">test</h3>
+                    <p class="category text-white">category: <span>all, graphic</span></p>
+                    <p class="overlay_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab cum eaque illo
+                        minima, omnis quae voluptatibus? Consequuntur dignissimos exercitationem, facere fugit.</p>
+                    <button>Read More</button>
+                </div>
+                <div class="img_overlay_mobile d-flex justify-content-center align-items-center">
+                    <button>Read More</button>
+                </div>
+            </article>
+            <!-- IMAGE 5-->
+            <article class="img_container all motion active_filter">
+                <img alt="" src="img/image-5.png">
+                <div class="img_overlay">
+                    <h3 class="text-uppercase text-white">test</h3>
+                    <p class="category text-white">category: <span>all, motion</span></p>
+                    <p class="overlay_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab cum eaque illo
+                        minima, omnis quae voluptatibus? Consequuntur dignissimos exercitationem, facere fugit.</p>
+                    <button>Read More</button>
+                </div>
+                <div class="img_overlay_mobile d-flex justify-content-center align-items-center">
+                    <button>Read More</button>
+                </div>
+            </article>
+            <!-- IMAGE 6-->
+            <article class="img_container all graphic active_filter">
+                <img alt="" src="img/image-6.png">
+                <div class="img_overlay">
+                    <h3 class="text-uppercase text-white">test</h3>
+                    <p class="category text-white">category: <span>all, graphic</span></p>
+                    <p class="overlay_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab cum eaque illo
+                        minima, omnis quae voluptatibus? Consequuntur dignissimos exercitationem, facere fugit.</p>
+                    <button>Read More</button>
+                </div>
+                <div class="img_overlay_mobile d-flex justify-content-center align-items-center">
+                    <button>Read More</button>
+                </div>
+            </article>
+            <!-- IMAGE 7-->
+            <article class="img_container all illustration active_filter">
+                <img alt="" src="img/image-7.png">
+                <div class="img_overlay">
+                    <h3 class="text-uppercase text-white">test</h3>
+                    <p class="category text-white">category: <span>all, illustration</span></p>
+                    <p class="overlay_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab cum eaque illo
+                        minima, omnis quae voluptatibus? Consequuntur dignissimos exercitationem, facere fugit.</p>
+                    <button>Read More</button>
+                </div>
+                <div class="img_overlay_mobile d-flex justify-content-center align-items-center">
+                    <button>Read More</button>
+                </div>
+            </article>
+            <!-- IMAGE 8-->
+            <article class="img_container all illustration active_filter">
+                <img alt="" src="img/image-8.png">
+                <div class="img_overlay">
+                    <h3 class="text-uppercase text-white">test</h3>
+                    <p class="category text-white">category: <span>all, illustration</span></p>
+                    <p class="overlay_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab cum eaque illo
+                        minima, omnis quae voluptatibus? Consequuntur dignissimos exercitationem, facere fugit.</p>
+                    <button>Read More</button>
+                </div>
+                <div class="img_overlay_mobile d-flex justify-content-center align-items-center">
+                    <button>Read More</button>
+                </div>
+            </article>
+            <!-- IMAGE 9-->
+            <article class="img_container all graphic active_filter">
+                <img alt="" src="img/image-9.png">
+                <div class="img_overlay">
+                    <h3 class="text-uppercase text-white">test</h3>
+                    <p class="category text-white">category: <span>all, graphic</span></p>
+                    <p class="overlay_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab cum eaque illo
+                        minima, omnis quae voluptatibus? Consequuntur dignissimos exercitationem, facere fugit.</p>
+                    <button>Read More</button>
+                </div>
+                <div class="img_overlay_mobile d-flex justify-content-center align-items-center">
+                    <button>Read More</button>
+                </div>
+            </article>
+            <!-- IMAGE 10-->
+            <article class="img_container all motion active_filter">
+                <img alt="" src="img/image-10.png">
+                <div class="img_overlay">
+                    <h3 class="text-uppercase text-white">test</h3>
+                    <p class="category text-white">category: <span>all, motion</span></p>
+                    <p class="overlay_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab cum eaque illo
+                        minima, omnis quae voluptatibus? Consequuntur dignissimos exercitationem, facere fugit.</p>
+                    <button>Read More</button>
+                </div>
+                <div class="img_overlay_mobile d-flex justify-content-center align-items-center">
+                    <button>Read More</button>
+                </div>
+            </article>
+            <!-- IMAGE 11-->
+            <article class="img_container all motion active_filter">
+                <img alt="" src="img/image-11.png">
+                <div class="img_overlay">
+                    <h3 class="text-uppercase text-white">test</h3>
+                    <p class="category text-white">category: <span>all, motion</span></p>
+                    <p class="overlay_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab cum eaque illo
+                        minima, omnis quae voluptatibus? Consequuntur dignissimos exercitationem, facere fugit.</p>
+                    <button>Read More</button>
+                </div>
+                <div class="img_overlay_mobile d-flex justify-content-center align-items-center">
+                    <button>Read More</button>
+                </div>
+            </article>
+            <!-- IMAGE 12-->
+            <article class="img_container all graphic motion active_filter">
+                <img alt="" src="img/image-12.png">
+                <div class="img_overlay">
+                    <h3 class="text-uppercase text-white">test</h3>
+                    <p class="category text-white">category: <span>all, graphic, motion</span></p>
+                    <p class="overlay_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab cum eaque illo
+                        minima, omnis quae voluptatibus? Consequuntur dignissimos exercitationem, facere fugit.</p>
+                    <button>Read More</button>
+                </div>
+                <div class="img_overlay_mobile d-flex justify-content-center align-items-center">
+                    <button>Read More</button>
+                </div>
+            </article>
+        </div>
+    </section>
+</main>
+<footer>
+    <section class="footer text-center">
+        <h2 class="text-white">Get in Touch</h2>
+        <p class="text-white" id="p1">Vestibulum id ligula porta felis euismod semper,malesuada euismod.</p>
+        <p class="text-center text-white"><i class="color-red fa-solid fa-location-dot"></i> Moonshine Street No: 14/05
+            Light City, Jupiter <span class="color-red phone">&#9742;</span> 0247 541 65 87
+        </p>
+        <!-- ICONS OPGEVRAAGD VIA FONT AWESOME + HERSTYLED IN DE CSS -->
+        <p class="text-center align-items-center text-white"><i class="fa-solid fa-rss"></i><i
+                class="fa-brands fa-facebook-f"></i><i class="fa-brands fa-twitter"></i><i
+                class="fa-brands fa-dribbble"></i><i class="fa-brands fa-pinterest"></i></p>
+    </section>
+    <section class="text-center text-white" id="copyright">
+        <h2>&commat; Webpaint. All Rights Reserved.</h2>
+    </section>
+</footer>
+<!-- INLADEN VAN DE MAIN JAVASCRIPT -->
+<script src="js/main.js"></script>
+<!-- INLADEN VAN DE AOS JAVASCRIPT -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+</body>
+</html>
